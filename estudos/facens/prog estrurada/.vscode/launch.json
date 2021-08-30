@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "/home/gaba/projetos/estudos/facens/prog estrurada",
+      "environment": [],
+      "program": "/home/gaba/projetos/estudos/facens/prog estrurada/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/snap/bin/gdb",
+      "externalConsole": false
+    }
+  ]
+}
