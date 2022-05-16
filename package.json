@@ -1,0 +1,14 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "teste da Rocky",
+  "main": "resolucao cal.js",
+  "scripts": {
+    "start:dev": "nodemons resolucao.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
