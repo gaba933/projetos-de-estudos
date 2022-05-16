@@ -1,0 +1,41 @@
+.noticia {
+background: #e5e5e5;
+padding: 5px;
+width: 280px;
+margin: 7px;
+float: left;
+}
+
+.clear{
+
+	clear: both;
+
+}
+
+
+.imagens{
+
+	background: white;
+	width: 265px;
+	padding: 5px;
+	float: left;
+	margin: 15px;
+
+}
+
+.notf{
+background: none;
+padding: 0px;
+width: 560px;
+margin: 0px;
+float: left;
+
+}
+
+body{
+	background: #f4f4f4;
+}
+
+#principal{
+	width: 920px
+}
