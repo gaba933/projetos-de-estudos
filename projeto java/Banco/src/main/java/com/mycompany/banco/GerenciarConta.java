@@ -60,5 +60,33 @@ public class GerenciarConta {
         }
         return info;
     }
+
+    public String busca(){
+        String info="";
+
+        for (Conta objConta: listaConta){
+            if (objConta.getSaldo()==1000.00){
+                info += "\n-----------";
+
+                info += "\nNumero da Conta: " + objConta.getNumero();
+                info += "\nSaldo: " + objConta.getSaldo();
+            }
+        }
+        return info;
+    }
+
+    public String contaNegativa(){
+        String info="---CONTAS NEGATIVAS---";
+
+        for (Conta objConta: listaConta){
+            if (objConta.estanegativo()){
+                info += "\n---------";
+
+                info += "\nNumero da Conta: " + objConta.getNumero();
+                info += "\nSaldo: " + objConta.getSaldo();
+            }
+        }
+        return info;
+    }
     
 }

@@ -1,7 +1,6 @@
 package com.mycompany.banco;
 
 public class Conta {
-	
     private int numero;
     private double saldo;
     private Cliente titular;
@@ -35,37 +34,39 @@ public class Conta {
     public void setTitular(Cliente titular) {
         this.titular = titular;
     }
-    
+
     public String imprimir(){
         String info="";
-        
+
         info += "\nTitular: " + this.titular.imprimir();
-        
+
         info += "\nNumero: " + this.numero;
         info += "\nsaldo: "+ this.saldo;
-        
+
         return info;
     }
-	
     public void depositar(double quantia){
-        
+
         this.setSaldo(this.getSaldo()+quantia);
-        
+
     }
-    
     public boolean sacar(double quantia){
-        if((this.getSaldo()-quantia)>0){
-            
+        if (this.getSaldo()- quantia>0){
+
             this.setSaldo(this.getSaldo()-quantia);
-            
+
             return true;
-        } else{
-            
+        } else {
+
             return false;
-            
         }
     }
-    
-    
-    
+
+    public boolean estanegativo(){
+        if (this.getSaldo()<0){
+            return true;
+        } else{
+            return false;
+        }
+    }
 }
