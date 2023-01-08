@@ -42,4 +42,13 @@ public class ContaEspecial extends Conta{
         }
         
     }
+
+    @Override
+    public boolean estanegativo(){
+        if ((this.getSaldo()+ this.getSaldo())<0){
+            return true;
+        } else{
+            return false;
+        }
+    }
 }

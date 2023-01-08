@@ -7,8 +7,10 @@ public class GerenciarConta {
     private ArrayList <Conta> listaConta;
 
     public GerenciarConta(ArrayList<Conta> listaConta) {
-        this.listaConta = listaConta;
+        this.listaConta = new ArrayList<Conta>();
     }
+
+    public GerenciarConta() {}
 
     public ArrayList<Conta> getListaConta() {
         return listaConta;
@@ -17,9 +19,8 @@ public class GerenciarConta {
     public void setListaConta(ArrayList<Conta> listaConta) {
         this.listaConta = listaConta;
     }
-    
+
     public void cadastrar(Conta objConta){
-        
         this.listaConta.add(objConta);
     }
     
@@ -56,6 +57,34 @@ public class GerenciarConta {
         for(Conta objConta: listaConta){
             if(objConta.getTitular().getCpf().equalsIgnoreCase(cpf)){
                 info += objConta.imprimir();
+            }
+        }
+        return info;
+    }
+
+    public String busca(){
+        String info="";
+
+        for (Conta objConta: listaConta){
+            if (objConta.getSaldo()==1000.00){
+                info += "\n-----------";
+
+                info += "\nNumero da Conta: " + objConta.getNumero();
+                info += "\nSaldo: " + objConta.getSaldo();
+            }
+        }
+        return info;
+    }
+
+    public String contaNegativa(){
+        String info="---CONTAS NEGATIVAS---";
+
+        for (Conta objConta: listaConta){
+            if (objConta.estanegativo()){
+                info += "\n---------";
+
+                info += "\nNumero da Conta: " + objConta.getNumero();
+                info += "\nSaldo: " + objConta.getSaldo();
             }
         }
         return info;
