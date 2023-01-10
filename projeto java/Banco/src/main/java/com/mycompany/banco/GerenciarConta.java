@@ -20,8 +20,8 @@ public class GerenciarConta {
         this.listaConta = listaConta;
     }
 
-    public void cadastrar(Conta objConta){
-        this.listaConta.add(objConta);
+    public void cadastrar(Conta conta){
+        this.listaConta.add(conta);
     }
     
     public String imprimir(){

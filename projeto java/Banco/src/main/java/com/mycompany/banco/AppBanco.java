@@ -33,11 +33,71 @@ public class AppBanco {
 
             switch (op){
                 case 0:{
+                    //codigo para cadastrar cliente
+
+                    Cliente cliente = tela_cadCliente();
+                    gerCliente.cadastrar(cliente);
+
+                    break;
+                }
+
+                case 1:{
                     //codigo para cadastrar conta
 
-                    Cliente cliente =
+                    int tipoConta =0;
+                    Conta conta = tela_cadConta(gerCliente, tipoConta);
+                    gerConta.cadastrar(conta);
+
+                    break;
+                }
+
+                case 2:{
+                    //codigo para cadastrar conta espacial
+
+                    int tipoConta =1;
+                    Conta conta = tela_cadConta(gerCliente, tipoConta);
+
+                    break;
+                }
+
+                case 3:{
+                    
                 }
             }
+        }
+    }
+
+    public static Cliente tela_cadCliente(){
+
+        String cpf;
+        String nome;
+        String endereco;
+        String telefone;
+
+        nome = JOptionPane.showInputDialog("digite o nome: ");
+        cpf = JOptionPane.showInputDialog("digite o spc: ");
+        endereco = JOptionPane.showInputDialog("digite o endereco: ");
+        telefone = JOptionPane.showInputDialog("digite o telefone: ");
+
+        return new Cliente(nome, cpf, endereco,telefone);
+    }
+
+    public static Conta tela_cadConta( GerenciarCliente gerCliente, int tipoConta ){
+
+        int numero;
+        String cpf;
+
+        Cliente cliente;
+
+        numero = Integer.parseInt(JOptionPane.showInputDialog("digite o numero da conta: ") );
+        cpf = JOptionPane.showInputDialog("digite o cpf do titular: ");
+
+        cliente = gerCliente.buscar(cpf);
+
+        if (tipoConta==0){
+            return  new Conta(numero, cliente);
+        } else {
+            return new ContaEspecial(numero, cliente);
         }
     }
 

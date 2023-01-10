@@ -11,14 +11,17 @@ public class GerenciarCliente {
     }
 
     public ArrayList<Cliente> getListaCliente() {
+
         return listaCliente;
     }
 
     public void setListaCliente(ArrayList<Cliente> listaCliente) {
+
         this.listaCliente = listaCliente;
     }
 
     public void cadastrar(Cliente cliente){
+
         this.listaCliente.add(cliente);
     }
 
@@ -35,7 +38,7 @@ public class GerenciarCliente {
         return info;
     }
 
-    public Cliente listaCliente(String cpf){
+    public Cliente buscar(String cpf){
         for (Cliente cliente: listaCliente){
             if (cpf.equalsIgnoreCase( cliente.getCpf() )){
                 return cliente;
