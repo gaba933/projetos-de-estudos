@@ -1,0 +1,27 @@
+form{
+  text-align: center;
+  display: block;
+  padding-left: auto;
+  padding-right: auto;
+}
+.tab{
+    width: auto;
+    height: auto;
+    padding-left: 0%;
+    padding-right: 0%;   
+}
+textarea{
+resize: none;
+}
+input[type="submit"]{
+    cursor: pointer;
+}
+fieldset{
+    margin-left:20%;
+    margin-right:20%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+.block{
+    display: block;
+}
