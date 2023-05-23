@@ -1,0 +1,13 @@
+{
+  "name": "resolucao_rocky_2023",
+  "version": "1.0.0",
+  "description": "teste da Rocky",
+  "main": "resolucao.js",
+  "scripts": {
+    "start:dev": " nodemon resolucao.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
